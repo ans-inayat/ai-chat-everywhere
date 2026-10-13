@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Ai Chat everywhere",
+  "version": "20",
+  "description": "Access AI chat anywhere on the web in the Chrome side panel. The same chat session stays open in the sidebar.",
+  "minimum_chrome_version": "114",
+  "icons": {
+    "32": "icon-32.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Ai Chat everywhere"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "history",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "frame_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

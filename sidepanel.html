@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ai Chat everywhere</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="sidepanel.css">
+</head>
+<body>
+
+  <div id="menuView">
+    <div id="menuContent"></div>
+  </div>
+
+  <div id="chatView" hidden>
+    <div id="toolbar">
+      <button id="btnMenu" title="AI menu">&#9776;</button>
+      <span id="chatTitle">AI chat</span>
+      <span class="spacer"></span>
+      <button id="btnReload" title="Reload">&#10227;</button>
+      <button id="btnOpenTab" title="Open in new tab">&#8599;</button>
+    </div>
+    <iframe id="chatFrame" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
