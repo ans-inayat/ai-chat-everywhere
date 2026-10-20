@@ -70,15 +70,27 @@ No data is collected, stored remotely, or transmitted anywhere. See [PRIVACY.md]
 
 ## 💝 Support the project
 
-The extension is free, ad-free and open source. If it saves you time, you can support development (all optional):
+The extension is free, ad-free and open source. If it saves you time, you can
+support development (all optional) with a direct bank transfer:
 
-- ⭐ **GitHub Sponsors** — <https://github.com/sponsors/ans-inayat>
-- ☕ **Buy Me a Coffee** — enabled on the donate page once the account exists
-- ☕ **Ko-fi** — enabled on the donate page once the account exists
+| | |
+|---|---|
+| 🏦 Bank | **Meezan Bank** (Pakistan) |
+| 👤 Account title | **Ans Inayat** |
+| 📇 IBAN (PKR) | `PK18MEZN0011610110777342` |
+| 🌍 SWIFT (international wires) | `MEZNPKKA` (head office, Karachi) |
 
-Inside the extension: **menu → ❤️ Support / Donate** (or the 🍕 Donate link at the bottom of the menu). Donations go directly to the developer — the extension never charges anything and never handles payments itself.
+Inside Pakistan: any bank app, Raast, JazzCash or Easypaisa → send to the IBAN.
+From abroad: international wire to Meezan Bank using the SWIFT + IBAN above
+(any currency, the bank converts it).
 
-To enable Ko-fi / Buy Me a Coffee, put your username in the two commented-out links in `donate.html` (and in `.github/FUNDING.yml` for the repo's Sponsor button).
+Inside the extension: **menu → ❤️ Support / Donate** (or the 🍕 Donate link at
+the bottom of the menu) — the page shows the same details with one-tap
+**Copy IBAN / Copy SWIFT** buttons. Donations go directly to the developer;
+the extension never charges anything and never handles payments itself.
+
+> Why bank transfer? GitHub Sponsors, Ko-fi and Buy Me a Coffee do not support
+> payout accounts in Pakistan.
 
 ## Firefox
 

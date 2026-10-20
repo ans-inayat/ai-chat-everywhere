@@ -1,3 +1,36 @@
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+  }
+  return fallbackCopy(text);
+}
+
+function fallbackCopy(text) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.cssText = "position:fixed;top:-1000px;opacity:0";
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try {
+    document.execCommand("copy");
+  } finally {
+    ta.remove();
+  }
+}
+
+document.addEventListener("click", (event) => {
+  const copyEl = event.target.closest("[data-copy]");
+  if (!copyEl) return;
+  event.preventDefault();
+  const value = copyEl.getAttribute("data-copy");
+  copyToClipboard(value).then(() => {
+    const original = copyEl.textContent;
+    copyEl.textContent = "Copied ✓";
+    setTimeout(() => (copyEl.textContent = original), 1500);
+  });
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   const checkbox = document.getElementById("openInNewTab");
   const { openInNewTab } = await chrome.storage.local.get("openInNewTab");

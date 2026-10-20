@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Ai Chat everywhere",
-  "version": "22",
+  "version": "23",
   "description": "Access AI chat anywhere on the web in the Chrome side panel. The same chat session stays open in the sidebar.",
   "minimum_chrome_version": "114",
   "icons": {

@@ -35,7 +35,7 @@ Supported sites include OpenAI ChatGPT, Google Gemini, Claude, Grok, NotebookLM,
 
 How it works: Chrome does not allow arbitrary websites as side panels, so the chat is rendered inside the panel with a framing rule that removes X-Frame-Options / Content-Security-Policy from iframe responses only. When you visit those AI sites in a normal tab, all their security headers remain fully intact.
 
-Free to use, ad-free and open source. Optional donations (GitHub Sponsors / Ko-fi / Buy Me a Coffee) are available from the menu (❤️ Support / Donate) and go directly to the developer. Nothing is charged inside the extension.
+Free to use, ad-free and open source. Optional donations are available from the menu (❤️ Support / Donate) and go directly to the developer via bank transfer (Meezan Bank, Pakistan — the developer's country; Ko-fi / Buy Me a Coffee / GitHub Sponsors payouts are not available there). Nothing is charged inside the extension.
 ```
 
 **Category:** Productivity
@@ -67,7 +67,7 @@ https://github.com/ans-inayat/ai-chat-everywhere/blob/main/PRIVACY.md
 
 > Note for reviewers: the optional "Read tabs" feature reads page text **only** after the user presses 📑, accepts Chrome's permission prompt, ticks specific tabs and confirms again. The text is kept in `chrome.storage.session` (deleted when the browser closes) and is only ever copied to the user's own clipboard — it is never transmitted by the extension.
 
-> Donations: the "❤️ Support / Donate" menu entry is a plain informational page with links to the developer's GitHub Sponsors / Ko-fi / Buy Me a Coffee pages. It contains no payment form, no Web Store payments and no digital-goods purchase flow — donations are handled entirely off-store on the linked platforms.
+> Donations: the "❤️ Support / Donate" menu entry is a plain informational page showing the developer's bank transfer details (account title, IBAN, SWIFT) with copy-to-clipboard buttons. It contains no payment form, no Web Store payments and no digital-goods purchase flow — donations are handled entirely off-store by ordinary bank transfer. Bank details are shown because the developer is based in Pakistan, where Ko-fi / Buy Me a Coffee / GitHub Sponsors payouts are not supported.
 
 ### Permission justifications (fill the form fields with these)
 

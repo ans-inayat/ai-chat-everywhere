@@ -1,7 +1,5 @@
-# GitHub Sponsors button appears on the repo page once the account is enrolled:
-# https://github.com/sponsors/ans-inayat
-github: ans-inayat
-
-# Uncomment and set your username once the accounts exist:
-# ko_fi: YOURNAME
-# buymeacoffee: YOURNAME
+# GitHub Sponsors / Ko-fi / Buy Me a Coffee do not support payouts in
+# Pakistan — donations are collected by bank transfer (Meezan Bank IBAN,
+# see donate.html). The custom link below makes the repo's "Sponsor"
+# button point at the bank details.
+custom: ["https://github.com/ans-inayat/ai-chat-everywhere#-support-the-project"]

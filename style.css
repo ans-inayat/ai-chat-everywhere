@@ -98,6 +98,52 @@ a {
 	margin: 8px 6px;
 	line-height: 1.45;
 }
+.bankBox {
+	background: #ffffff;
+	border: 1px solid #dbdbdb;
+	border-radius: 6px;
+	margin: 8px 6px;
+	padding: 8px;
+	box-shadow: 1px 2px 15px -7px rgba(0,0,0,0.35);
+}
+.bankTitle {
+	font-size: 13px;
+	font-weight: bold;
+	color: #204755;
+	margin-bottom: 6px;
+}
+.bankRow {
+	font-size: 11px;
+	margin-top: 5px;
+	word-break: break-word;
+}
+.bankLabel {
+	color: #71717a;
+	display: block;
+}
+.bankValue {
+	color: #1c1c1c;
+}
+.bankIban {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 11px;
+}
+.bankCopy {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 5px;
+	height: 24px;
+	font-size: 12px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007aa6;
+	color: #ffffff;
+	cursor: pointer;
+}
+.bankCopy:hover {
+	background-color: #006186;
+}
 .back {
 	color: #000;
 	border: none;

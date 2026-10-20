@@ -3,33 +3,48 @@
 <head>
   <title>Ai Chat everywhere - support</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="popup.js"></script>
   <meta charset="UTF-8">
 </head>
 <body>
 
   <ul id="aiMenu">
-    <a target="_blank" class="orange" href="https://github.com/sponsors/ans-inayat">
-      ⭐ GitHub Sponsors
-    </a>
-
-    <!--
-      To enable Ko-fi / Buy Me a Coffee: replace YOURNAME with your
-      username on each platform and uncomment the two lines below.
-    -->
-    <!-- <a target="_blank" class="pages folder" href="https://www.buymeacoffee.com/YOURNAME">
-      ☕ Buy Me a Coffee
-    </a>
-    <a target="_blank" class="pages folder" href="https://ko-fi.com/YOURNAME">
-      ☕ Ko-fi
-    </a> -->
-
     <a href="popup.html" class="back">back</a>
   </ul>
 
   <div class="donateNote">
     This extension is <b>free, open source and ad-free</b>. Donations are
-    completely optional — they only help keep it updated and add new
-    features. Nothing is ever charged inside the extension.
+    completely optional — they help keep it updated and add new features.
+    (Ko-fi, Buy Me a Coffee and GitHub Sponsors don't pay out in Pakistan,
+    so donations go directly by bank transfer.)
+  </div>
+
+  <div class="bankBox">
+    <div class="bankTitle">🏦 Bank transfer — Meezan Bank</div>
+
+    <div class="bankRow">
+      <span class="bankLabel">Account title</span>
+      <b class="bankValue">Ans Inayat</b>
+    </div>
+
+    <div class="bankRow">
+      <span class="bankLabel">IBAN (PKR)</span>
+      <b class="bankValue bankIban">PK18MEZN0011610110777342</b>
+    </div>
+    <button class="bankCopy" data-copy="PK18MEZN0011610110777342">Copy IBAN</button>
+
+    <div class="bankRow">
+      <span class="bankLabel">SWIFT (international)</span>
+      <b class="bankValue">MEZNPKKA</b>
+    </div>
+    <button class="bankCopy" data-copy="MEZNPKKA">Copy SWIFT</button>
+  </div>
+
+  <div class="donateNote">
+    🇵🇰 Inside Pakistan: send to the IBAN from any bank or JazzCash/Easypaisa
+    (Raast). 🌍 From abroad: wire to <b>Meezan Bank</b>, SWIFT
+    <b>MEZNPKKA</b>, using the IBAN above — any currency is fine, the bank
+    converts it.
   </div>
 
   <div class="links">

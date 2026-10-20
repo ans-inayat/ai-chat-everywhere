@@ -110,7 +110,41 @@ async function openSite(url) {
   showChat(url);
 }
 
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+  }
+  return fallbackCopy(text);
+}
+
+function fallbackCopy(text) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.cssText = "position:fixed;top:-1000px;opacity:0";
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try {
+    document.execCommand("copy");
+  } finally {
+    ta.remove();
+  }
+}
+
 menuContent.addEventListener("click", (event) => {
+  const copyEl = event.target.closest("[data-copy]");
+  if (copyEl) {
+    event.preventDefault();
+    const value = copyEl.getAttribute("data-copy");
+    copyToClipboard(value).then(() => {
+      showToast("Copied: " + value);
+      const original = copyEl.textContent;
+      copyEl.textContent = "Copied ✓";
+      setTimeout(() => (copyEl.textContent = original), 1500);
+    });
+    return;
+  }
+
   const li = event.target.closest("li[data-website]");
   if (li) {
     openSite(li.getAttribute("data-website"));
