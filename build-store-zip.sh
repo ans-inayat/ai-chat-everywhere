@@ -13,7 +13,7 @@ zip -r "$OUT" \
   manifest.json \
   background.js \
   popup.html popup.js \
-  category.html prompts.html \
+  category.html prompts.html donate.html \
   style.css \
   sidepanel.html sidepanel.css sidepanel.js \
   tabcontext.js \

@@ -68,6 +68,18 @@ Visiting the AI sites directly in a normal tab is **not** affected — all their
 
 No data is collected, stored remotely, or transmitted anywhere. See [PRIVACY.md](PRIVACY.md).
 
+## 💝 Support the project
+
+The extension is free, ad-free and open source. If it saves you time, you can support development (all optional):
+
+- ⭐ **GitHub Sponsors** — <https://github.com/sponsors/ans-inayat>
+- ☕ **Buy Me a Coffee** — enabled on the donate page once the account exists
+- ☕ **Ko-fi** — enabled on the donate page once the account exists
+
+Inside the extension: **menu → ❤️ Support / Donate** (or the 🍕 Donate link at the bottom of the menu). Donations go directly to the developer — the extension never charges anything and never handles payments itself.
+
+To enable Ko-fi / Buy Me a Coffee, put your username in the two commented-out links in `donate.html` (and in `.github/FUNDING.yml` for the repo's Sponsor button).
+
 ## Firefox
 
 The original Firefox add-on lives at [khzg/ChatGPT](https://github.com/khzg/ChatGPT) ([AMO listing](https://addons.mozilla.org/en-US/firefox/addon/chatgpt-everywhere/)). This repo is the Chrome (MV3 + Side Panel) conversion of that extension. The old Firefox package is kept in `Ai-Chat-everywhere.zip`.

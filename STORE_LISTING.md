@@ -35,7 +35,7 @@ Supported sites include OpenAI ChatGPT, Google Gemini, Claude, Grok, NotebookLM,
 
 How it works: Chrome does not allow arbitrary websites as side panels, so the chat is rendered inside the panel with a framing rule that removes X-Frame-Options / Content-Security-Policy from iframe responses only. When you visit those AI sites in a normal tab, all their security headers remain fully intact.
 
-Free to use. If it helps you, rate it ⭐ and share it.
+Free to use, ad-free and open source. Optional donations (GitHub Sponsors / Ko-fi / Buy Me a Coffee) are available from the menu (❤️ Support / Donate) and go directly to the developer. Nothing is charged inside the extension.
 ```
 
 **Category:** Productivity
@@ -66,6 +66,8 @@ https://github.com/ans-inayat/ai-chat-everywhere/blob/main/PRIVACY.md
 - Does it collect browsing activity? **No** (the `history` permission is used only to *delete* specific URLs locally)
 
 > Note for reviewers: the optional "Read tabs" feature reads page text **only** after the user presses 📑, accepts Chrome's permission prompt, ticks specific tabs and confirms again. The text is kept in `chrome.storage.session` (deleted when the browser closes) and is only ever copied to the user's own clipboard — it is never transmitted by the extension.
+
+> Donations: the "❤️ Support / Donate" menu entry is a plain informational page with links to the developer's GitHub Sponsors / Ko-fi / Buy Me a Coffee pages. It contains no payment form, no Web Store payments and no digital-goods purchase flow — donations are handled entirely off-store on the linked platforms.
 
 ### Permission justifications (fill the form fields with these)
 
@@ -99,7 +101,7 @@ Suggested screenshot set: (1) side panel open with ChatGPT next to a normal webs
 ```bash
 cd /path/to/repo
 bash build-store-zip.sh
-# produces dist/ai-chat-everywhere-v20.zip  → upload this file
+# produces dist/ai-chat-everywhere-v<manifest version>.zip  → upload this file
 ```
 
 ---
@@ -107,7 +109,7 @@ bash build-store-zip.sh
 ## 6. Submission checklist
 
 1. Pay the one-time $5 developer registration fee (if you have not already)
-2. New item → upload `dist/ai-chat-everywhere-v20.zip`
+2. New item → upload the zip produced by `build-store-zip.sh` (see section 5)
 3. Fill store listing with section 1 above
 4. Fill privacy practices with section 3 above
 5. Upload graphics (section 4)

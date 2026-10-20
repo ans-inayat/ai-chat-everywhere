@@ -92,6 +92,12 @@ a {
 .folder {
 	background-color: #204755;
 }
+.donateNote {
+	font-size: 12px;
+	color: #444444;
+	margin: 8px 6px;
+	line-height: 1.45;
+}
 .back {
 	color: #000;
 	border: none;
