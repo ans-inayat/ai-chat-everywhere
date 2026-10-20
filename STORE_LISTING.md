@@ -25,6 +25,7 @@ Open ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity and 60+ other AI tools 
 
 • Native Chrome side panel: the AI chat sits beside the website, not on top of it
 • Same chat session stays in the sidebar: switch to the menu, switch AI, or browse other tabs — your chat is still there when you return (it uses your existing AI login)
+• Read your open tabs into the chat, like Copilot: press 📑, allow the optional permission Chrome asks for, tick one or several tabs, confirm — the page text is attached locally and ready to paste into any AI with Ctrl+V
 • Full menu inside the panel: main AI list, Categories (search, agents, image generators, files & spreadsheets, music, code, face swap) and curated Prompt collections
 • "Open chat in new tab" option for any site that refuses to be framed
 • Daily cleanup of AI URLs from your local browsing history for privacy
@@ -64,6 +65,8 @@ https://github.com/ans-inayat/ai-chat-everywhere/blob/main/PRIVACY.md
 - Does it collect web content? **No**
 - Does it collect browsing activity? **No** (the `history` permission is used only to *delete* specific URLs locally)
 
+> Note for reviewers: the optional "Read tabs" feature reads page text **only** after the user presses 📑, accepts Chrome's permission prompt, ticks specific tabs and confirms again. The text is kept in `chrome.storage.session` (deleted when the browser closes) and is only ever copied to the user's own clipboard — it is never transmitted by the extension.
+
 ### Permission justifications (fill the form fields with these)
 
 | Field | Justification |
@@ -73,6 +76,9 @@ https://github.com/ans-inayat/ai-chat-everywhere/blob/main/PRIVACY.md
 | `history` | Deletes AI-website URLs from the user's local browsing history so that opening chats does not clutter or expose their history. The extension never reads or uploads history. |
 | `declarativeNetRequestWithHostAccess` | Removes `X-Frame-Options` and `Content-Security-Policy` response headers from iframe (sub_frame) requests only, so the official AI website UIs can render inside the side panel. Top-level navigation is not affected. |
 | `host_permissions: https://*/*` | Needed so the framing-header rule above can apply to any AI website the user chooses to open in the panel. No page content is read or modified. |
+| `scripting` (**optional**, runtime) | Asked for only when the user presses the 📑 "Read tabs" button and accepts Chrome's prompt. Reads the visible page text of the tabs the user ticks in the picker, stored locally for the session so it can be pasted into an AI chat. Nothing is read without that explicit action and consent. |
+| `tabs` (**optional**, runtime) | Same prompt: lists the user's open tabs (title, URL, favicon) in the picker so the user can choose which tabs to attach. |
+| `http://*/*` (**optional**, runtime) | Requested only if the user ticks an `http://` tab in the picker, so that tab's text can be read. |
 
 ---
 

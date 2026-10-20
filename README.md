@@ -10,9 +10,24 @@ Open ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity and 60+ other AI tools 
 - Toolbar icon opens the panel directly
 - Full AI menu inside the panel: main list, Categories (search, agents, image, files, music, code, face swap) and Prompts
 - **Same chat session in the sidebar**: the iframe is only reloaded when you pick a different site; menu/chat switching and panel reopen restore your last chat
+- **Read open tabs into the chat** (like Edge Copilot): attach one or several tabs as context, then paste it into any AI
 - "open chat in new tab" option if a site refuses to be framed
 - Daily cleanup of AI URLs from your local browsing history
 - Uses your existing AI logins — no accounts, no third-party auth, no data collection
+
+## 📑 Read tabs into the chat
+
+Click the **📑** button in the panel header:
+
+1. **Permission** — the first click asks Chrome to allow the *optional* `scripting` + `tabs` permissions. Nothing is read until you press **Allow**; you can decline and the feature simply stays off.
+2. **Pick tabs** — a list of your open tabs (title, URL, favicon, per window) with checkboxes, a filter field, and **All** / **None** shortcuts. Restricted pages (`chrome://`, `file://`, …) are marked *no access*.
+3. **Confirm** — a second dialog shows exactly which tabs will be read before anything happens.
+4. **Use it** — the page text of each selected tab (up to 20 000 characters per tab) is stored **locally for the browser session only**, shown as `📑 N tabs · X KB` in the header, then:
+   - **Copy** → puts the formatted context on the clipboard; click the chat box and press `Ctrl+V`, then ask your question
+   - **View** → preview/edit the text before copying
+   - **✕** → clear it from memory at any time
+
+The text never leaves your machine and is never uploaded anywhere.
 
 ## Install (unpacked)
 
@@ -32,6 +47,7 @@ ChatGPT, Gemini, Claude, Grok, NotebookLM, Bing Image, DeepSeek, Copilot, Perple
 | File | Role |
 |------|------|
 | `sidepanel.html/js/css` | Side panel UI: menu (loaded from the pages below) + chat iframe, session restore via `chrome.storage` |
+| `tabcontext.js` | 📑 Tab reader: picker, consent dialog, text extraction, clipboard |
 | `popup.html`, `category.html`, `prompts.html`, `pages/` | The menu itself (fetched and rendered inside the panel) |
 | `rules.json` | DNR rule: strips `X-Frame-Options` and `Content-Security-Policy` from **sub_frame** responses only |
 | `background.js` | Opens the panel on toolbar click; daily history cleanup |
@@ -46,6 +62,9 @@ Visiting the AI sites directly in a normal tab is **not** affected — all their
 | `storage` | Remember the last open chat, menu view and "open in new tab" setting |
 | `history` | Remove AI site URLs from your local browsing history (privacy) |
 | `declarativeNetRequestWithHostAccess` + `https://*/*` | Remove framing headers (`X-Frame-Options`, `Content-Security-Policy`) from iframe responses so AI sites can render in the panel |
+| **optional** `scripting` | Read the text of the tabs you explicitly select — requested at runtime the first time you use 📑, never before |
+| **optional** `tabs` | List your open tabs (title/URL/favicon) in the picker — same runtime prompt |
+| **optional** `http://*/*` | Only requested if you tick an `http://` tab, so it can be read too |
 
 No data is collected, stored remotely, or transmitted anywhere. See [PRIVACY.md](PRIVACY.md).
 

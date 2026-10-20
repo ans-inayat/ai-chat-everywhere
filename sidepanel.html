@@ -8,21 +8,83 @@
 </head>
 <body>
 
+  <header id="panelHeader">
+    <div id="toolbar">
+      <button id="btnMenu" title="AI menu">&#9776;</button>
+      <span id="chatTitle">Ai Chat everywhere</span>
+      <span class="spacer"></span>
+      <span id="chatActions">
+        <button id="btnReload" title="Reload chat">&#10227;</button>
+        <button id="btnOpenTab" title="Open in new tab">&#8599;</button>
+      </span>
+      <button id="btnTabs" title="Read open tabs into chat context">&#128209;</button>
+    </div>
+    <div id="contextBar" hidden>
+      <span id="contextInfo">No tabs attached</span>
+      <span class="spacer"></span>
+      <button id="btnCopyCtx" title="Copy context to clipboard">Copy</button>
+      <button id="btnViewCtx" title="View or edit context">View</button>
+      <button id="btnClearCtx" title="Clear context">&#10005;</button>
+    </div>
+  </header>
+
   <div id="menuView">
     <div id="menuContent"></div>
   </div>
 
   <div id="chatView" hidden>
-    <div id="toolbar">
-      <button id="btnMenu" title="AI menu">&#9776;</button>
-      <span id="chatTitle">AI chat</span>
-      <span class="spacer"></span>
-      <button id="btnReload" title="Reload">&#10227;</button>
-      <button id="btnOpenTab" title="Open in new tab">&#8599;</button>
-    </div>
     <iframe id="chatFrame" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
   </div>
 
+  <div id="tabsOverlay" hidden>
+    <div id="tabsPanel">
+      <div class="overlayHead">
+        <strong>Select tabs to read</strong>
+        <button class="iconBtn" id="btnCloseTabs" title="Close">&#10005;</button>
+      </div>
+      <input id="tabsFilter" type="search" placeholder="Filter by title or url&hellip;" autocomplete="off">
+      <div id="tabsList"></div>
+      <div class="overlayFoot">
+        <span id="tabsCount">0 selected</span>
+        <span class="spacer"></span>
+        <button id="btnSelectAll">All</button>
+        <button id="btnClearSel">None</button>
+        <button id="btnReadTabs" class="primary">Read tabs</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirmOverlay" hidden>
+    <div id="confirmBox">
+      <div class="overlayHead"><strong>Allow reading these tabs?</strong></div>
+      <div id="confirmList"></div>
+      <p class="note">Only the visible page text of the tabs listed above is read, and only after you press <b>Read tabs</b>. The text stays in this browser until you remove it — it is never uploaded anywhere.</p>
+      <div class="overlayFoot">
+        <span class="spacer"></span>
+        <button id="confirmCancel">Cancel</button>
+        <button id="confirmOk" class="primary">Read tabs</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="previewOverlay" hidden>
+    <div id="previewBox">
+      <div class="overlayHead">
+        <strong>Chat context</strong>
+        <button class="iconBtn" id="btnClosePreview" title="Close">&#10005;</button>
+      </div>
+      <textarea id="previewText" spellcheck="false"></textarea>
+      <div class="overlayFoot">
+        <span id="previewCount">0 characters</span>
+        <span class="spacer"></span>
+        <button id="btnCopyEdited" class="primary">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" hidden></div>
+
   <script src="sidepanel.js"></script>
+  <script src="tabcontext.js"></script>
 </body>
 </html>

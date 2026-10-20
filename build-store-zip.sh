@@ -16,6 +16,7 @@ zip -r "$OUT" \
   category.html prompts.html \
   style.css \
   sidepanel.html sidepanel.css sidepanel.js \
+  tabcontext.js \
   rules.json \
   icon.png icon-32.png \
   pages \

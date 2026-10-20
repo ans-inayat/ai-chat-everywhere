@@ -3,9 +3,22 @@ const menuContent = document.getElementById("menuContent");
 const chatView = document.getElementById("chatView");
 const chatFrame = document.getElementById("chatFrame");
 const chatTitle = document.getElementById("chatTitle");
+const chatActions = document.getElementById("chatActions");
 const btnMenu = document.getElementById("btnMenu");
 const btnReload = document.getElementById("btnReload");
 const btnOpenTab = document.getElementById("btnOpenTab");
+
+let toastTimer = null;
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.hidden = true;
+  }, 3500);
+}
 
 const HOME_PAGE = "popup.html";
 
@@ -44,6 +57,8 @@ async function loadMenu(path) {
 }
 
 function renderMenu() {
+  chatTitle.textContent = "Ai Chat everywhere";
+  chatActions.hidden = true;
   menuView.hidden = false;
   chatView.hidden = true;
 }
@@ -52,6 +67,7 @@ function renderChat(url) {
   if (!url) return;
 
   chatTitle.textContent = hostnameOf(url);
+  chatActions.hidden = false;
 
   // Same site = keep the frame alive so the chat session is not reset
   if (chatFrame.dataset.site !== url) {
