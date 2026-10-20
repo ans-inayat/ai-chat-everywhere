@@ -26,12 +26,12 @@ Open ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity and 60+ other AI tools 
 • Native Chrome side panel: the AI chat sits beside the website, not on top of it
 • Same chat session stays in the sidebar: switch to the menu, switch AI, or browse other tabs — your chat is still there when you return (it uses your existing AI login)
 • Read your open tabs into the chat, like Copilot: press 📑, allow the optional permission Chrome asks for, tick one or several tabs, confirm — the page text is attached locally and ready to paste into any AI with Ctrl+V
-• Full menu inside the panel: main AI list, Categories (search, agents, image generators, files & spreadsheets, music, code, face swap) and curated Prompt collections
+• Full menu inside the panel: main AI list, Categories (search, agents, image generators incl. Nano Banana, video generators incl. Google Flow/Veo, Sora and Seedance, vibe-code app builders like Lovable/Bolt/v0, public prompt libraries, files & spreadsheets, music, code, face swap) and curated Prompt collections
 • "Open chat in new tab" option for any site that refuses to be framed
 • Daily cleanup of AI URLs from your local browsing history for privacy
 • No accounts, no sign-up, no data collection: everything stays in your browser
 
-Supported sites include OpenAI ChatGPT, Google Gemini, Claude, Grok, NotebookLM, Bing Image Creator, Microsoft Copilot, DeepSeek, Perplexity, Poe, DuckDuckGo AI, You.com, Mistral, Phind, Blackbox, Suno, Udio, ElevenLabs, Midjourney, Leonardo, Freepik, Recraft, Krea, Stable Diffusion, Pollinations, ChatPDF, ChatDoc, MindGrasp, Websim, Cursor, Codex and more.
+Supported sites include OpenAI ChatGPT, Google Gemini (Nano Banana image generation), Claude, Grok, NotebookLM, Bing Image Creator, Microsoft Copilot, DeepSeek, Perplexity, Poe, DuckDuckGo AI, You.com, Mistral, Phind, Blackbox, Suno, Udio, ElevenLabs, Midjourney, Leonardo, Freepik, Recraft, Krea, Stable Diffusion, Pollinations, ChatPDF, ChatDoc, MindGrasp, Websim, Cursor, Codex, plus video generators (Google Flow with Veo, OpenAI Sora, ByteDance Seedance via Dreamina, Kling, Runway, Luma, Pika, Hailuo, Vidu, PixVerse), vibe-code app builders (Lovable, Bolt, v0, Replit, Base44, Manus, Genspark, Trae, Firebase Studio, Devin) and public prompt libraries (FlowGPT, PromptBase, PromptHero, Lexica, CivitAI, OpenArt).
 
 How it works: Chrome does not allow arbitrary websites as side panels, so the chat is rendered inside the panel with a framing rule that removes X-Frame-Options / Content-Security-Policy from iframe responses only. When you visit those AI sites in a normal tab, all their security headers remain fully intact.
 

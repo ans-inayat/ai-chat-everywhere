@@ -8,7 +8,7 @@ Open ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity and 60+ other AI tools 
 
 - Native Chrome side panel (pushes the page aside, not an overlay)
 - Toolbar icon opens the panel directly
-- Full AI menu inside the panel: main list, Categories (search, agents, image, files, music, code, face swap) and Prompts
+- Full AI menu inside the panel: main list, Categories (search, agents, image, **video**, **vibe-code app builders**, **prompt libraries**, files, music, code, face swap) and Prompts
 - **Same chat session in the sidebar**: the iframe is only reloaded when you pick a different site; menu/chat switching and panel reopen restore your last chat
 - **Read open tabs into the chat** (like Edge Copilot): attach one or several tabs as context, then paste it into any AI
 - "open chat in new tab" option if a site refuses to be framed
@@ -40,7 +40,7 @@ Requires Chrome 114 or newer.
 
 ## Supported AI sites
 
-ChatGPT, Gemini, Claude, Grok, NotebookLM, Bing Image, DeepSeek, Copilot, Perplexity, Poe, DuckDuckGo AI, You.com, Mistral, Phind, Blackbox, Suno, Udio, ElevenLabs, Midjourney, Leonardo, Freepik, Recraft, Krea, Stable Diffusion, Pollinations, ChatPDF, ChatDoc, MindGrasp, Websim, Cursor, Codex and more — see `popup.html` and `pages/*.html`.
+ChatGPT, Gemini (incl. **Nano Banana** image generation), Claude, Grok, NotebookLM, Bing Image, DeepSeek, Copilot, Perplexity, Poe, DuckDuckGo AI, You.com, Mistral, Phind, Blackbox, Suno, Udio, ElevenLabs, Midjourney, Leonardo, Freepik, Recraft, Krea, Stable Diffusion, Pollinations, ChatPDF, ChatDoc, MindGrasp, Websim, Cursor, Codex — plus **video generation** (Google Flow/Veo, Sora, Seedance/Dreamina, Kling, Runway, Luma, Pika, Hailuo, Vidu, PixVerse), **vibe-code app builders** (Lovable, Bolt, v0, Replit, Base44, Manus, Genspark, Firebase Studio, Devin …) and **public prompt libraries** (FlowGPT, PromptBase, PromptHero, Lexica, CivitAI, OpenArt …) — see `popup.html` and `pages/*.html`.
 
 ## How it works
 
